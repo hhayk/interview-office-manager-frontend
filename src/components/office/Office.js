@@ -54,7 +54,7 @@ class Office extends Component {
                 </Alert>
 
                 <div>
-                    <Button href="#" className="add-button" onClick={(e) => this.onAddClick()}>
+                    <Button href="#" className="add-button" onClick={(e) => this.onAddClick()} disabled={this.props.officeDataChanged}>
                         Add Office
                     </Button>
 

@@ -88,19 +88,19 @@ class Shipment extends Component {
         return (
             <div className="container-inner">
                 <Alert variant="success" show={this.props.shipmentsDataChanged} style={{ opacity: 1 }}>
-                    Shipments Successfuly {this.props.shipmentAdded ? 'Created' : 'Edited'}
+                    Shipments Data Updated Successfuly
                 </Alert>
 
                 <div>
                     <div>
                         <ButtonGroup aria-label="Basic example" className="add-button">
-                            <Button href="#" onClick={(e) => this.onToggleFilters()}>
+                            <Button href="#" onClick={(e) => this.onToggleFilters()} disabled={this.props.shipmentsDataChanged}>
                                 Filters
                             </Button>
 
                             <div style={{ display: "inline-block", width: 5 }}></div>
 
-                            <Button href="#" onClick={(e) => this.onAddClick()}>
+                            <Button href="#" onClick={(e) => this.onAddClick()} disabled={this.props.shipmentsDataChanged}>
                                 Add Shipment
                             </Button>
                         </ButtonGroup>
