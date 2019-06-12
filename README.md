@@ -1,4 +1,4 @@
-## Backend support for
+## Frontend support for
 
 `https://github.com/hhayk/interview_office_manager_backend`
 
