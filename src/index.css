@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container-inner {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.add-button {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.form-outer-border {
+  border: 0.2rem solid #ececec;
+  padding: 1rem;
+  border-radius: 8px;
+  border-width: 0.2rem;
+}

@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/Header';
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import Office from './components/office/Office';
+import Shipment from './components/shipment/Shipment';
+import AddEditOffice from './components/office/AddEditOffice';
+import AddEditShipment from './components/shipment/AddEditShipment';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Header />
+
+        <div className="container">
+          <Redirect from="/" exact to="/office" />
+          <Route exact path="/office" component={Office} />
+          <Route exact path="/office/add" component={AddEditOffice} />
+          <Route exact path="/office/edit" component={AddEditOffice} />
+          <Route exact path="/shipment" component={Shipment} />
+          <Route exact path="/shipment/add" component={AddEditShipment} />
+          <Route exact path="/shipment/edit" component={AddEditShipment} />
+        </div>
+      </div>
+    </Router>
   );
 }
 
