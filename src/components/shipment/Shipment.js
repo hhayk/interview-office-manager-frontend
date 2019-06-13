@@ -54,7 +54,10 @@ class Shipment extends Component {
     }
 
     onApplyFilters = (filters) => {
-        this.setState({ filters });
+        this.setState({
+            activePage: 0,
+            filters
+        });
         this.onToggleFilters();
     }
 
@@ -78,7 +81,6 @@ class Shipment extends Component {
     }
 
     render() {
-        console.log(this.state.filters);
         let shipments = this.props.shipments
             .filter(shipment => this.state.filters.type.indexOf(shipment.type) !== -1)
             .filter(shipment => this.state.filters.status.indexOf(shipment.status) !== -1)

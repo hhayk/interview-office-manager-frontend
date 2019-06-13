@@ -30,7 +30,6 @@ class FiltersPopup extends Component {
     }
 
     render() {
-        console.log(this.props.filters.location);
         return <Modal show={this.props.show} onHide={this.props.handleCloseClick} size="lg">
             <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>

@@ -25,8 +25,6 @@ export function fetchShipments() {
         axios
             .get(API_URL + 'shipments')
             .then(response => {
-                console.log("Response")
-                console.log(response.data)
                 dispatch({
                     type: SHIPMENTS_LOAD_SUCCESS,
                     payload: { shipments: response.data }
